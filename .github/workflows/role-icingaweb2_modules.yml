@@ -1,0 +1,40 @@
+---
+
+name: Role icingaweb2_modules - General
+on:
+  push:
+    branches:
+      - "main"
+      - "feature/**"
+      - "fix/**"
+      - "!doc/**"
+    paths:
+      - "roles/icingaweb2_modules/**"
+  pull_request:
+    branches:
+      - "feature/**"
+      - "fix/**"
+      - "!doc/**"
+    paths:
+      - "roles/icingaweb2_modules/**"
+
+jobs:
+  linting:
+    runs-on: "python:3.11"
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies for testing
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r testing-requirements.txt
+
+      - name: Run YAML-lint
+        run: |
+          yamllint roles/icingaweb2_modules/
+
+      - name: Run Ansible-lint
+        run: |
+          ansible-lint roles/icingaweb2_modules/

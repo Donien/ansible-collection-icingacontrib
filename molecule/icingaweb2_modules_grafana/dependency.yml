@@ -1,0 +1,7 @@
+---
+
+dependency:
+  name: galaxy
+  options:
+    role-file: "icingaweb2_modules_grafana/requirements.yml"
+    requirements-file: "icingaweb2_modules_grafana/requirements.yml"

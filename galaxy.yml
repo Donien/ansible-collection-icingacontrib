@@ -1,0 +1,29 @@
+namespace: netways
+name: icinga_contrib
+version: 0.0.1
+readme: README.md
+authors:
+  - Matthias Döhler <matthias.doehler@netways.de>
+description: |
+  This Ansible Collection is meant as an addition to the official Ansible Collection by Icinga.
+  While the official Collection only handles official Icinga components, netways.icinga_contrib aims to fill the gap.
+license:
+  - GPL-3.0-only
+tags:
+  - icinga
+  - icingaweb
+  - icingaweb2
+dependencies: {}
+repository: https://github.com/netways/ansible-collection-icinga_contrib
+documentation: https://github.com/netways/ansible-collection-icinga_contrib
+homepage: https://www.netways.de/en
+issues: https://github.com/netways/ansible-collection-icinga_contrib/issues
+build_ignore:
+  - .git
+  - .github
+  - .gitignore
+  - .ansible-lint
+  - .yamllint
+  - molecule
+  - testing-requirements.txt
+  - tests
